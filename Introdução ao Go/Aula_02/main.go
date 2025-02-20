@@ -1,16 +1,25 @@
+
+
 package main
 
-import "fmt" // Imprimir
+import "fmt"
 
-
-const constante string = "CONSTANTE"
-func main(){
-	var texto string = "Hey" // Variavel
-	var numero = 123 // Assume o tipo da varíavel. 
-	str := "New world"
-	numero += 1
-
-
-	fmt.Println(texto, str, numero, constante)
-
+func main() {
+    // Declarando variáveis
+    var x int 
+    y := 15    
+	y += 5
+    name := "Kayque"
+    
+    // Exibindo valores
+    fmt.Println("x:", x)    
+    fmt.Println("y:", y)    
+    fmt.Println("name:", name) 
+    
+    // Declarando constante
+    const PI = 3.14159   
+    
+    // Exibindo constante
+    fmt.Println("PI:", PI) 
 }
+
