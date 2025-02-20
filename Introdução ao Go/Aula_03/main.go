@@ -8,6 +8,6 @@ import (
 
 func main()  {
 	fmt.Println("Escolha qual código executar:")
-    past.MainFloat() 
-    past.MainInt()    
+    past.MainFloat() // Executa o código de float
+    past.MainInt()    // Executa o código de inteiro
 }
