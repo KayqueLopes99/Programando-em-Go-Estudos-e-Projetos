@@ -99,26 +99,18 @@ func Toint(s string) (int, error) {
 // Função que executa o quiz, fazendo as perguntas ao jogador e verificando as respostas
 func (g *GameState) Run() {
 	
-	for index, question := range g.Questions {
-		
+	for index, question := range g.Questions {	
 		fmt.Printf("\033[32m %d. %s\033[m\n", index+1, question.Text)
-
-	
 		for j, option := range question.Options {
 			fmt.Printf("\033[36m[%d] %s\033[m\n", j+1, option)
 		}
-
 		var answer int
 		var err error
-
 		for {
 			fmt.Println("Digite uma Alternativa: ")
-
 			reader := bufio.NewReader(os.Stdin)
 			read, _ := reader.ReadString('\n')
-
 			read = strings.TrimSpace(read)
-
 			answer, err = Toint(read)
 
 			if err != nil || answer < 1 || answer > 4 {
